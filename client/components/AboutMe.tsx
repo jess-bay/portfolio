@@ -2,5 +2,10 @@
 // Contact details
 // Why I have decided to work as a web developer
 export default function AboutMe() {
-  return <h3>Hello</h3>
+  return (
+    <div>
+      <h3>My Time At Dev</h3>
+      <p></p>
+    </div>
+  )
 }
