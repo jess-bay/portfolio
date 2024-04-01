@@ -12,7 +12,7 @@ export default function WorkHistory() {
           {data?.map((work: History) => (
             <div
               key={work.id}
-              className="p-6 bg-white border border-gray-300 rounded-md shadow-md transition-transform duration-300 transform hover:scale-105"
+              className="p-6 mx-6 bg-white border border-gray-300 rounded-md shadow-md transition-transform duration-300 transform hover:scale-105"
             >
               <p className="text-lg font-semibold">Year: {work.years}</p>
               <p className="text-gray-600">Company: {work.name}</p>

@@ -6,7 +6,12 @@ export function Nav() {
     <>
       <nav className="bg-gradient-to-r from-gray-800 to-gray-700 text-white p-4 border-b-2 border-gray-700 sm:flex sm:justify-between sm:items-center">
         <ul className="flex">
-          <li className="mr-6">About Me</li>
+          <li className="mr-6">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="mr-6">
+            <Link to="/about">About Me</Link>
+          </li>
           <li className="mr-6">
             <Link
               to="/education"
