@@ -1,4 +1,4 @@
-export interface Education {
+export interface EducationType {
   id: number
   year: string
   name: string

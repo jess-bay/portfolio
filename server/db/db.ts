@@ -1,6 +1,6 @@
 import connection from './connection'
 import { History } from '../../models/workHistory'
-import { Education } from '../../models/education'
+import { EducationType } from '../../models/education'
 import { Skill } from '../../models/skills'
 
 const db = connection
@@ -30,7 +30,7 @@ export async function getSkills(): Promise<Skill[] | undefined> {
   }
 }
 
-export async function getEducation(): Promise<Education[] | undefined> {
+export async function getEducation(): Promise<EducationType[] | undefined> {
   try {
     return db('education').select()
   } catch (error) {
@@ -40,9 +40,9 @@ export async function getEducation(): Promise<Education[] | undefined> {
 
 export async function getEducationById(
   id: number,
-): Promise<Education | undefined> {
+): Promise<EducationType | undefined> {
   try {
-    return db<Education>('education').where('id', id).first()
+    return db<EducationType>('education').where('id', id).first()
   } catch (error) {
     console.error('Failed to load education id: ', error)
   }
