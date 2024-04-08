@@ -1,12 +1,5 @@
-/* body {
-  background-image: url('../../purple\ minimalist\ desktop\ wallpaper.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-} */
-
 .dark-theme {
-  background-image: url('../../purple\ minimalist\ desktop\ wallpaper.jpg');
+  background-image: url('../../dark-theme.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -19,6 +12,14 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: black;
+}
+
+#nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 @media (max-width: 425px) {

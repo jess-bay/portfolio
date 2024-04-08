@@ -23,20 +23,23 @@ export function Education({ darkTheme }: EducationProps) {
             {data?.map((education: EducationType) => (
               <div
                 key={education.id}
-                className={`mb-4 ml-6 mr-6 border border-gray-300 rounded-md shadow-md transition-transform duration-300 transform hover:scale-105 ${
+                className={`p-6 mb-4 ml-6 mr-6 border border-gray-300 rounded-md shadow-md transition-transform duration-300 transform hover:scale-105 ${
                   darkTheme ? 'bg-purple-800' : 'bg-white'
                 }`}
                 style={{
                   backgroundColor: darkTheme
                     ? 'rgba(128, 0, 128, 0.5)'
                     : 'rgba(255, 255, 255, 0.5)',
+                  // padding: '10px',
                 }}
               >
-                <p className="test-lg font-semibold">Year: {education.year}</p>
+                <p className="test-lg font-semibold">
+                  {education.qualification}
+                </p>
                 <p
                   className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}
                 >
-                  Qualification: {education.qualification}
+                  Year: {education.year}
                 </p>
                 <p
                   className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}

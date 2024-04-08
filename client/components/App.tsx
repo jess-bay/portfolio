@@ -1,7 +1,6 @@
-import { Outlet } from 'react-router-dom'
 import { Education } from './Education'
 import { Nav } from './Nav'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ThemeButton from './ThemeButton'
 import WorkHistory from './WorkHistory'
 import Skills from './Skills'

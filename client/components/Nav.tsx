@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { Education } from './Education'
 import ScrollToSection from './ScrollToSection'
 
 interface NavProps {
@@ -10,11 +9,11 @@ export function Nav({ darkTheme }: NavProps) {
   return (
     <>
       <nav
-        className={`p-4 border-b-2 border-gray-700 flex justify-center `}
+        className={`p-4 border-b-2 border-gray-700 flex justify-center`}
         style={{
           backgroundColor: darkTheme
-            ? 'rgba(128, 0, 128, 0.5)'
-            : 'rgba(255, 255, 255, 0.5)',
+            ? 'rgba(128, 0, 128)'
+            : 'rgba(255, 255, 255)',
         }}
         id="nav"
       >
