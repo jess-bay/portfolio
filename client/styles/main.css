@@ -21,23 +21,15 @@
   color: black;
 }
 
-/* .theme-button {
-  background-color: rgb(203, 230, 248);
-  margin-left: 10px;
-  margin-top: 10px;
-} */
-
-/* .theme-button .dark-theme {
-  background-color: purple;
-} */
-/* 
-.light-theme-div {
-  background-color: #ffffff; /* Light theme background color */
-/* color: #616161; Light theme text color */
-/* } */
-
-/* CSS for Dark Theme */
-/* .dark-theme-div {
-  background-color: #574482; /* Dark theme background color */
-/* color: #ffffff; Dark theme text color */
-/* } */
+@media (max-width: 425px) {
+  #nav > ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #nav > ul > li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+}

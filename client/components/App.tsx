@@ -21,14 +21,14 @@ function App() {
   return (
     <>
       <div className={darkTheme ? 'dark-theme' : 'light-theme'}>
-        <Nav />
+        <Nav darkTheme={darkTheme} />
         <ThemeButton darkTheme={darkTheme} changeTheme={changeTheme} />
-        <Home />
-        <AboutMe />
+        <Home darkTheme={darkTheme} />
+        <AboutMe darkTheme={darkTheme} />
         <Education darkTheme={darkTheme} />
-        <Skills />
+        <Skills darkTheme={darkTheme} />
         <WorkHistory darkTheme={darkTheme} />
-        <Projects />
+        <Projects darkTheme={darkTheme} />
       </div>
     </>
   )

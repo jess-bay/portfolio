@@ -1,13 +1,21 @@
 import { Skill } from '../../models/skills'
 import { useSkills } from '../hooks/useSkills'
 
-export default function Skills() {
+interface SkillProps {
+  darkTheme: boolean
+}
+
+export default function Skills({ darkTheme }: SkillProps) {
   const { data } = useSkills()
 
   return (
     <>
-      <div className="mt-8" id="skills">
-        <h3 className="text-2xl font-bold mb-4 ml-6">Skills</h3>
+      <div className="mt-8 " id="skills">
+        <h3
+          className={`text-2xl font-bold mb-4 ml-6 mr-6 ${darkTheme ? 'dark-theme-text' : 'light-theme-text'} flex justify-center items-center h-screen`}
+        >
+          Skills
+        </h3>
         <div className="flex flex-wrap gap-4">
           {data?.map((skill: Skill) => (
             <div

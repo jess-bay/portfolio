@@ -6,11 +6,19 @@ interface NavProps {
   darkTheme: boolean
 }
 
-export function Nav() {
+export function Nav({ darkTheme }: NavProps) {
   return (
     <>
-      <nav className="text-white p-4 border-b-2 border-gray-700 sm:flex sm:justify-between sm:items-center">
-        <ul className="flex">
+      <nav
+        className={`p-4 border-b-2 border-gray-700 flex justify-center `}
+        style={{
+          backgroundColor: darkTheme
+            ? 'rgba(128, 0, 128, 0.5)'
+            : 'rgba(255, 255, 255, 0.5)',
+        }}
+        id="nav"
+      >
+        <ul className="flex justify-center items-center">
           <li className="mr-6">
             <Link to="/" onClick={ScrollToSection}>
               Home
@@ -48,12 +56,7 @@ export function Nav() {
               Work History
             </Link>
           </li>
-          <li
-            className="mr-6"
-            // className="hover:text-gray-300 transition-colors duration-300"
-          >
-            Projects
-          </li>
+          <li className="mr-6">Projects</li>
         </ul>
       </nav>
     </>
