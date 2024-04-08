@@ -1,21 +1,35 @@
 import { Outlet } from 'react-router-dom'
 import { Education } from './Education'
 import { Nav } from './Nav'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ThemeButton from './ThemeButton'
+import WorkHistory from './WorkHistory'
+import Skills from './Skills'
+import Home from './Home'
+import AboutMe from './AboutMe'
+import Projects from './Projects'
 
 function App() {
-  const [lightTheme, setLightTheme] = useState(false)
+  const [darkTheme, setDarkTheme] = useState(false)
 
   const changeTheme = () => {
-    setLightTheme((previousTheme) => !previousTheme)
+    setDarkTheme((previousTheme) => !previousTheme)
+    document.documentElement.classList.toggle('dark-theme', !darkTheme)
+    document.documentElement.classList.toggle('light-theme', darkTheme)
   }
 
   return (
     <>
-      <Nav />
-      <ThemeButton lightTheme={lightTheme} changeTheme={changeTheme} />
-      <Outlet />
+      <div className={darkTheme ? 'dark-theme' : 'light-theme'}>
+        <Nav />
+        <ThemeButton darkTheme={darkTheme} changeTheme={changeTheme} />
+        <Home />
+        <AboutMe />
+        <Education darkTheme={darkTheme} />
+        <Skills />
+        <WorkHistory darkTheme={darkTheme} />
+        <Projects />
+      </div>
     </>
   )
 }

@@ -6,7 +6,7 @@ export default function Skills() {
 
   return (
     <>
-      <div className="mt-8">
+      <div className="mt-8" id="skills">
         <h3 className="text-2xl font-bold mb-4 ml-6">Skills</h3>
         <div className="flex flex-wrap gap-4">
           {data?.map((skill: Skill) => (

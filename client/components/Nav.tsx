@@ -1,21 +1,31 @@
 import { Link } from 'react-router-dom'
 import { Education } from './Education'
+import ScrollToSection from './ScrollToSection'
+
+interface NavProps {
+  darkTheme: boolean
+}
 
 export function Nav() {
   return (
     <>
-      <nav className="bg-gradient-to-r from-gray-800 to-gray-700 text-white p-4 border-b-2 border-gray-700 sm:flex sm:justify-between sm:items-center">
+      <nav className="text-white p-4 border-b-2 border-gray-700 sm:flex sm:justify-between sm:items-center">
         <ul className="flex">
           <li className="mr-6">
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={ScrollToSection}>
+              Home
+            </Link>
           </li>
           <li className="mr-6">
-            <Link to="/about">About Me</Link>
+            <Link to="/about" onClick={ScrollToSection}>
+              About Me
+            </Link>
           </li>
           <li className="mr-6">
             <Link
               to="/education"
               className="hover:text-gray-300 transition-colors duration-300"
+              onClick={ScrollToSection}
             >
               Education
             </Link>
@@ -24,6 +34,7 @@ export function Nav() {
             <Link
               to="/skills"
               className="hover:text-gray-300 transition-colors duration-300"
+              onClick={ScrollToSection}
             >
               Skills
             </Link>
@@ -32,6 +43,7 @@ export function Nav() {
             <Link
               to="/workhistory"
               className="hover:text-gray-300 transition-colors duration-300"
+              onClick={ScrollToSection}
             >
               Work History
             </Link>

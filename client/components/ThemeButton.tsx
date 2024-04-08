@@ -1,15 +1,15 @@
 import React from 'react'
 
 interface ThemeButton {
-  lightTheme: boolean
+  darkTheme: boolean
   changeTheme: () => void
 }
 
-const ThemeButton: React.FC<ThemeButton> = ({ lightTheme, changeTheme }) => {
+const ThemeButton: React.FC<ThemeButton> = ({ darkTheme, changeTheme }) => {
   return (
     <div>
-      <button onClick={changeTheme}>
-        {lightTheme ? 'Light Theme' : 'Dark Theme'}
+      <button className="theme-button" onClick={changeTheme}>
+        {darkTheme ? 'Light Theme' : 'Dark Theme'}
       </button>
     </div>
   )

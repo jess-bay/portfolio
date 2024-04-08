@@ -3,7 +3,7 @@
 // Why I have decided to work as a web developer
 export default function AboutMe() {
   return (
-    <div>
+    <div id="aboutme">
       <h3>My Time At Dev</h3>
       <p></p>
     </div>
