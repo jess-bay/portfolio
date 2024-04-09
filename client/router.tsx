@@ -11,14 +11,18 @@ import Skills from './components/Skills'
 import WorkHistory from './components/WorkHistory'
 import AboutMe from './components/AboutMe'
 
+interface Props {
+  darkTheme: boolean
+}
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index element={<Home />} />
-      <Route path="/about" element={<AboutMe />} />
-      <Route path="/education" element={<Education />} />
-      <Route path="/skills" element={<Skills />} />
-      <Route path="/workhistory" element={<WorkHistory />} />
+      <Route index element={<Home darkTheme={false} />} />
+      <Route path="/about" element={<AboutMe darkTheme={false} />} />
+      <Route path="/education" element={<Education darkTheme={false} />} />
+      <Route path="/skills" element={<Skills darkTheme={false} />} />
+      <Route path="/workhistory" element={<WorkHistory darkTheme={false} />} />
     </Route>,
   ),
 )

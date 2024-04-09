@@ -1,21 +1,38 @@
 import { Link } from 'react-router-dom'
-import { Education } from './Education'
+import ScrollToSection from './ScrollToSection'
 
-export function Nav() {
+interface NavProps {
+  darkTheme: boolean
+}
+
+export function Nav({ darkTheme }: NavProps) {
   return (
     <>
-      <nav className="bg-gradient-to-r from-gray-800 to-gray-700 text-white p-4 border-b-2 border-gray-700 sm:flex sm:justify-between sm:items-center">
-        <ul className="flex">
+      <nav
+        className={`p-4 border-b-2 border-gray-700 flex justify-center`}
+        style={{
+          backgroundColor: darkTheme
+            ? 'rgba(128, 0, 128)'
+            : 'rgba(255, 255, 255)',
+        }}
+        id="nav"
+      >
+        <ul className="flex justify-center items-center">
           <li className="mr-6">
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={ScrollToSection}>
+              Home
+            </Link>
           </li>
           <li className="mr-6">
-            <Link to="/about">About Me</Link>
+            <Link to="/about" onClick={ScrollToSection}>
+              About Me
+            </Link>
           </li>
           <li className="mr-6">
             <Link
               to="/education"
               className="hover:text-gray-300 transition-colors duration-300"
+              onClick={ScrollToSection}
             >
               Education
             </Link>
@@ -24,6 +41,7 @@ export function Nav() {
             <Link
               to="/skills"
               className="hover:text-gray-300 transition-colors duration-300"
+              onClick={ScrollToSection}
             >
               Skills
             </Link>
@@ -32,16 +50,12 @@ export function Nav() {
             <Link
               to="/workhistory"
               className="hover:text-gray-300 transition-colors duration-300"
+              onClick={ScrollToSection}
             >
               Work History
             </Link>
           </li>
-          <li
-            className="mr-6"
-            // className="hover:text-gray-300 transition-colors duration-300"
-          >
-            Projects
-          </li>
+          <li className="mr-6">Projects</li>
         </ul>
       </nav>
     </>
