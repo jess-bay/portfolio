@@ -20,34 +20,109 @@ export function Education({ darkTheme }: EducationProps) {
             Education
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4">
-            {data?.map((education: EducationType) => (
-              <div
-                key={education.id}
-                className={`p-6 mb-4 ml-6 mr-6 border border-gray-300 rounded-md shadow-md transition-transform duration-300 transform hover:scale-105 ${
-                  darkTheme ? 'bg-purple-800' : 'bg-white'
-                }`}
-                style={{
-                  backgroundColor: darkTheme
-                    ? 'rgba(128, 0, 128, 0.5)'
-                    : 'rgba(255, 255, 255, 0.5)',
-                  // padding: '10px',
-                }}
+            <div
+              key="dev"
+              className={`p-6 mb-4 ml-6 mr-6 border border-gray-300 rounded-md shadow-md transition-transform duration-300 transform hover:scale-105 ${
+                darkTheme ? 'bg-purple-800' : 'bg-white'
+              }`}
+              style={{
+                backgroundColor: darkTheme
+                  ? 'rgba(128, 0, 128, 0.5)'
+                  : 'rgba(255, 255, 255, 0.5)',
+                // padding: '10px',
+              }}
+            >
+              <p className="test-lg font-semibold">
+                Level 6 Applied Software Development
+              </p>
+              <p
+                className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}
               >
-                <p className="test-lg font-semibold">
-                  {education.qualification}
-                </p>
-                <p
-                  className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}
-                >
-                  Year: {education.year}
-                </p>
-                <p
-                  className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}
-                >
-                  Received From: {education.name}
-                </p>
-              </div>
-            ))}
+                Year: 2024
+              </p>
+              <p
+                className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}
+              >
+                Received From: Enspiral Dev Academy
+              </p>
+            </div>
+            <div
+              key="pm"
+              className={`p-6 mb-4 ml-6 mr-6 border border-gray-300 rounded-md shadow-md transition-transform duration-300 transform hover:scale-105 ${
+                darkTheme ? 'bg-purple-800' : 'bg-white'
+              }`}
+              style={{
+                backgroundColor: darkTheme
+                  ? 'rgba(128, 0, 128, 0.5)'
+                  : 'rgba(255, 255, 255, 0.5)',
+                // padding: '10px',
+              }}
+            >
+              <p className="test-lg font-semibold">
+                PRINCE2 Foundation Course for Project Management
+              </p>
+              <p
+                className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}
+              >
+                Year: 2023
+              </p>
+              <p
+                className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}
+              >
+                Received From: Project Laneways
+              </p>
+            </div>
+            <div
+              key="max"
+              className={`p-6 mb-4 ml-6 mr-6 border border-gray-300 rounded-md shadow-md transition-transform duration-300 transform hover:scale-105 ${
+                darkTheme ? 'bg-purple-800' : 'bg-white'
+              }`}
+              style={{
+                backgroundColor: darkTheme
+                  ? 'rgba(128, 0, 128, 0.5)'
+                  : 'rgba(255, 255, 255, 0.5)',
+                // padding: '10px',
+              }}
+            >
+              <p className="test-lg font-semibold">
+                Certificate III and Certificate IV in Fitness
+              </p>
+              <p
+                className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}
+              >
+                Year: 2021-2022
+              </p>
+              <p
+                className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}
+              >
+                Received From: MAX International College For Fitness
+                Professionals
+              </p>
+            </div>
+            <div
+              key="hs"
+              className={`p-6 mb-4 ml-6 mr-6 border border-gray-300 rounded-md shadow-md transition-transform duration-300 transform hover:scale-105 ${
+                darkTheme ? 'bg-purple-800' : 'bg-white'
+              }`}
+              style={{
+                backgroundColor: darkTheme
+                  ? 'rgba(128, 0, 128, 0.5)'
+                  : 'rgba(255, 255, 255, 0.5)',
+                // padding: '10px',
+              }}
+            >
+              <p className="test-lg font-semibold">Level 3 NCEA</p>
+              <p
+                className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}
+              >
+                Year: 2019
+              </p>
+              <p
+                className={`text-gray-600 ${darkTheme ? 'text-white' : 'text-gray-400'}`}
+              >
+                Received From: High School
+              </p>
+            </div>
           </div>
         </div>
       </div>
