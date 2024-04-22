@@ -18,11 +18,11 @@ export function Nav({ darkTheme }: NavProps) {
         id="nav"
       >
         <ul className="flex justify-center items-center">
-          <li className="mr-6">
+          {/* <li className="mr-6">
             <Link to="/" onClick={ScrollToSection}>
               Home
             </Link>
-          </li>
+          </li> */}
           <li className="mr-6">
             <Link to="/about" onClick={ScrollToSection}>
               About Me

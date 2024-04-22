@@ -1,14 +1,11 @@
-import { History } from '../../models/workHistory'
-import { useWorkHistory } from '../hooks/useWorkHistory'
+// import { History } from '../../models/workHistory'
+// import { useWorkHistory } from '../hooks/useWorkHistory'
 
 interface WorkHistoryProps {
   darkTheme: boolean
 }
 
 export default function WorkHistory({ darkTheme }: WorkHistoryProps) {
-  const { data } = useWorkHistory()
-  // const [darkTheme, setDarkTheme] = useState(false)
-
   return (
     <>
       <div

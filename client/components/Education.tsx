@@ -1,12 +1,12 @@
-import { EducationType } from '../../models/education'
-import { useEducation } from '../hooks/useEducation'
+// import { EducationType } from '../../models/education'
+// import { useEducation } from '../hooks/useEducation'
 
 interface EducationProps {
   darkTheme: boolean
 }
 
 export function Education({ darkTheme }: EducationProps) {
-  const { data } = useEducation()
+  // const { data } = useEducation()
 
   return (
     <>

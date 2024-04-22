@@ -1,12 +1,12 @@
-import { Skill } from '../../models/skills'
-import { useSkills } from '../hooks/useSkills'
+// import { Skill } from '../../models/skills'
+// import { useSkills } from '../hooks/useSkills'
 
 interface SkillProps {
   darkTheme: boolean
 }
 
 export default function Skills({ darkTheme }: SkillProps) {
-  const { data } = useSkills()
+  // const { data } = useSkills()
 
   return (
     <>
