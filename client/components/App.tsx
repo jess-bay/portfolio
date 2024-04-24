@@ -2,7 +2,6 @@ import { Education } from './Education'
 import { Nav } from './Nav'
 import { useState } from 'react'
 import ThemeButton from './ThemeButton'
-import WorkHistory from './WorkHistory'
 import Skills from './Skills'
 import Home from './Home'
 import AboutMe from './AboutMe'
@@ -26,7 +25,6 @@ function App() {
         <AboutMe darkTheme={darkTheme} />
         <Education darkTheme={darkTheme} />
         <Skills darkTheme={darkTheme} />
-        <WorkHistory darkTheme={darkTheme} />
         <Projects darkTheme={darkTheme} />
       </div>
     </>
