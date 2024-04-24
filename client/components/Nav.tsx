@@ -46,15 +46,6 @@ export function Nav({ darkTheme }: NavProps) {
               Skills
             </Link>
           </li>
-          <li className="mr-6">
-            <Link
-              to="/workhistory"
-              className="hover:text-gray-300 transition-colors duration-300"
-              onClick={ScrollToSection}
-            >
-              Work History
-            </Link>
-          </li>
           <li className="mr-6">Projects</li>
         </ul>
       </nav>

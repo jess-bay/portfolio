@@ -2,7 +2,6 @@ import express from 'express'
 import * as Path from 'node:path'
 import skillsRoutes from './routes/skills.ts'
 import educationRoutes from './routes/education.ts'
-import workRoutes from './routes/workHistory.ts'
 
 const server = express()
 
@@ -10,7 +9,6 @@ server.use(express.json())
 
 server.use('/api/v1/skills', skillsRoutes)
 server.use('/api/v1/education', educationRoutes)
-server.use('/api/v1/workhistory', workRoutes)
 
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static(Path.resolve('public')))
